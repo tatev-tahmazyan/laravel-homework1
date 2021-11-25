@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ValidationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,11 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/validation', function () {
-    return view('validation');
-})->name('validation');
+Route::get('/homework/list', function () {
+    return view('list',['fruits' => ['pear','peach','banana','apple','orange']]);
+})->name('homework1-list');
+
+Route::get('/homework/validation', [ValidationController::class,'showform'])->name('homework1-validation');
+Route::post('/homework/validation', [ValidationController::class,'validateform']);
+
 
