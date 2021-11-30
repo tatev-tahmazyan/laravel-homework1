@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ValidationController;
+use App\Http\Controllers\TestMysqlController;
+use App\Http\Controllers\CarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +27,6 @@ Route::get('/homework/list', function () {
 Route::get('/homework/validation', [ValidationController::class,'showform'])->name('homework1-validation');
 Route::post('/homework/validation', [ValidationController::class,'validateform']);
 
+Route::get('/testsql', [TestMysqlController::class,'index']);
 
+Route::get('/homework/car', [CarController::class,'index'])->name('homework2-car');
