@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title','List Homework')
 
@@ -12,5 +12,5 @@
         @endforeach
       </ul>
     @endif
-  @endisset    
+  @endisset
 @endsection

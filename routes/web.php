@@ -6,6 +6,9 @@ use App\Http\Controllers\TestMysqlController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\OneToManyController;
 use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('home');
@@ -34,3 +37,15 @@ Route::get('/homework/upload_image', [ImageUploadController::class, 'createForm'
 Route::post('/homework/upload-image', [ImageUploadController::class, 'imageUpload'])->name('imageUpload');
 
 Route::get('/homework/see-images', [ImageUploadController::class, 'imageName'])->name('homework4-images');
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//crud categories
+Route::resource('/categories', CategoryController::class);
+
+//crud products
+Route::resource('/products', ProductController::class);

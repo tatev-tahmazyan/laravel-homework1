@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title','Validation')
 
@@ -7,8 +7,8 @@
 
 @section('content')
     <h1>Validation page</h1>
-    
-    @if (count($errors) > 0) 
+
+    @if (count($errors) > 0)
         <div class = "alert alert-danger">
         <ul>
     @foreach ($errors->all() as $error)

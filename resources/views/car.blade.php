@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title','Cars')
 
@@ -21,9 +21,9 @@
                     <td>{{$car->range}}</td>
                     <td>{{$car->color}}</td>
                     <td>{{$car->price}}</td>
-                </tr>  
+                </tr>
             @endforeach
-            
+
         </table>
     @endisset
 @endsection

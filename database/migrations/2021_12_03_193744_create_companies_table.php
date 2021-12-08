@@ -13,17 +13,18 @@ class CreateCompaniesTable extends Migration
      */
     public function up()
     {
-        /*
+
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('title', 100);
             $table->timestamps();
         });
 
+
         Schema::table('users', function (Blueprint $table) {
             $table->integer('company_id')->nullable();
         });
-        */
+
     }
 
     /**
